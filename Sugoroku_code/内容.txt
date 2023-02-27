@@ -1,0 +1,372 @@
+【　プロジェクト名：　sugorokuGame	】
+【　パッケージ名　：　sugorokuGame_pkg	】
+【　クラス名　　　：　Main.java	　　　　】
+【　　　　　　　　：　Sugoroku.java　　 】
+
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+【　ソースコード　：　Main.java	】
+
+
+
+
+package sugorokuGame_pkg;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Sugoroku game = new Sugoroku();
+		String name;
+
+		//ユーザーの居るマス目表示用
+		int location = 0;
+
+		//ゲームを始める準備
+		game.ready();
+		//ユーザー名を取得
+		name = game.getName();
+
+		Scanner sc = new Scanner(System.in);
+
+		do {
+			location = game.select();
+		} while (location <= 10);
+
+	}
+
+}
+
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+【　ソースコード　：　Sugoroku.java　】
+
+
+
+package sugorokuGame_pkg;
+
+import java.util.Objects;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Sugoroku {
+	//ユーザーの名前を格納
+	String name;
+	//yes,noの分岐を判断するための変数
+	String ans;
+	//ユーザーの現在地を示す値を宣言
+	int location= 0;
+	//ターン数カウント用変数
+	int cnt = 0;
+	
+	//ランダムに出るサイコロの値を格納する変数
+	int diceNumber = 0;
+
+	//１～３までを出すサイコロ
+	public int Dice() {
+		Random dice = new Random();
+		this.diceNumber = dice.nextInt(3) + 1;
+		return diceNumber;
+	}
+
+	//コンソールから入力するためのスキャナークラスのインスタンス化
+	Scanner sc = new Scanner(System.in);
+
+	//ゲームを始めるか確認
+	public void ready() {
+		System.out.println("すごろくゲームをはじめますか？");
+		// 入力を促すメッセージ
+		System.out.print(">>　『　はい　』　（Press：Enter Key）　 ");
+		//エンターが押されたら次の処理へ
+		sc.nextLine();
+	}
+
+	//ユーザーの名前を取得し、ゲームを開始する
+	public String getName() {
+		System.out.println("あなたの名前を教えてください！");
+		System.out.println(">>　");
+		this.name = sc.nextLine();
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println(this.name + "さん、ようこそ");
+		System.out.println("");
+		System.out.println("-----------------------------------------------");
+		System.out.println("");
+		System.out.println("　　　　SUGOROKUゲーム　スタート　!!　");
+		System.out.println("　　　　　（Press：Enter Key）　");
+		System.out.println("");
+		System.out.println("-----------------------------------------------");
+		System.out.println("");
+		System.out.println("");
+		sc.nextLine();
+		return this.name;
+	}
+
+	// サイコロを振るか、振らないか選択
+	public int select() {
+		ans = null;
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println(name + "さんの現在地は：" + location + "マス目です！");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("サイコロを振りますか？");
+		System.out.println(">>はい　( Press : y Key)");
+		System.out.println(">>いいえ　( Press : n Key)");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		ans = sc.nextLine();
+
+		//"n"を選択したら、ゲーム終了とする
+		if (Objects.equals(ans, "n")) {
+			System.out.println("-----------------------------------------------");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("サイコロを振るのをやめました。");
+			System.out.println("SUGOROKUゲームを終了します");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println(cnt+"ターンでの終了となります。");
+			System.out.println(name + "さん、お疲れ様でした。");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("-----------------------------------------------");
+			System.out.println("");
+			location = 11;
+			
+		//"y"を選択したら、サイコロを振ってゲーム続行
+		} else if (Objects.equals(ans, "y")) {
+			ans = null;
+			cnt++;
+			diceNumber = Dice();
+			System.out.println("");
+			System.out.println("-----------------------------------------------");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println(name+"さんは、サイコロを振った！");
+			System.out.println(diceNumber + "が出ました！");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("【　　"+diceNumber + "マス　進む　　】");
+			location += diceNumber;
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("-----------------------------------------------");
+			System.out.println("");
+			
+			//マス目が10以上になったら、ゴール！ゲーム終了
+			if (location >= 10) {
+				System.out.println("");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("　　　　＼やったぁー！！／");
+
+				System.out.println("【　　｡ﾟ+.(*｀･∀･´*)ﾟ+.ﾟゴ―――――――ル！！！！｡ﾟ+.　　】");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("");
+				System.out.println(name + "さんの現在地は：" + location + "マス目です！");
+				System.out.println("");
+				System.out.println("");
+				System.out.println(cnt+"ターンでのゴール到着でした。");
+				System.out.println(name + "さん、お疲れ様でした！！");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("-----------------------------------------------");
+				System.out.println("");
+				location = 11;
+			}
+			
+			//10以下のマス目のイベント設定
+			switch (location) {
+			
+			//1マス目に止まった時のイベント
+			case 1:
+				System.out.println("");
+				System.out.println("");
+				System.out.println(name + "さんは：" + location + "マス目へ到着。");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("おっと？！ここでイベント発生！");
+				System.out.println("新幹線のチケット、ゲット！！");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("【　　やったー！　3マス　進む　　】");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("-----------------------------------------------");
+				System.out.println("");
+				System.out.println("");
+				location += 3;
+				break;
+				
+			//2マス目に止まった時のイベント
+			case 2:
+				System.out.println("");
+				System.out.println("");
+				System.out.println(name + "さんは：" + location + "マス目へ到着。");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("おっと？！ここでイベント発生！");
+				System.out.println("イノシシが出てきてびっくり仰天！！");
+				System.out.println("");
+				System.out.println("");
+				diceNumber = Dice();
+				System.out.println("【　　慌てて" + diceNumber + "マス　進む　　】");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("-----------------------------------------------");
+				System.out.println("");
+				System.out.println("");
+				location += diceNumber;
+				break;
+				
+			//5マス目に止まった時のイベント
+			case 5:
+				System.out.println("");
+				System.out.println("");
+				System.out.println(name + "さんは：" + location + "マス目へ到着。");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("おっと？！ここでイベント発生！");
+				System.out.println("反対方向の電車に乗ってしまった！");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("【　　ガガーン！！　2マス　戻る　　】");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("-----------------------------------------------");
+				System.out.println("");
+				System.out.println("");
+				location = 3;
+				break;
+				
+			//6マス目に止まった時のイベント
+			case 6:
+				System.out.println("");
+				System.out.println("");
+				System.out.println(name + "さんは：" + location + "マス目へ到着。");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("おっと？！ここでイベント発生！");
+				System.out.println("おにぎり拾って、ハッピーラッキー♪＼( 'ω')／");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("【　　スキップで　2マス　進む　　】");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("-----------------------------------------------");
+				System.out.println("");
+				System.out.println("");
+				location += 2;
+				break;
+				
+			//7マス目に止まった時のイベント
+			case 7:
+				System.out.println("");
+				System.out.println("");
+				System.out.println(name + "さんは：" + location + "マス目へ到着。");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("おっと？！ここでイベント発生！");
+				System.out.println("交差点で人の波に押し戻された！");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("【　　3マス目　から　再スタート　　】");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("-----------------------------------------------");
+				System.out.println("");
+				System.out.println("");
+				location = 3;
+				break;
+				
+			//9マス目に止まった時のイベント
+			case 9:
+				System.out.println("");
+				System.out.println("");
+				System.out.println(name + "さんは：" + location + "マス目へ到着。");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("おっと？！ここでイベント発生！");
+				System.out.println("財布を忘れてた！家に取りに帰らなきゃ！");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("　　　＼ナント！！／");
+				System.out.println("【　　ここへきて　振り出しに戻る　( ；∀；)ｿﾝﾅｰ　　】");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("-----------------------------------------------");
+				System.out.println("");
+				System.out.println("");
+				location = 0;
+				break;
+			}
+			
+		//yでもnでもないものが入力された時の処理
+		} else {
+			System.out.println("-----------------------------------------------");
+			System.out.println("");
+			System.out.println("y か n　を入力して下さい");
+			System.out.println("");
+			System.out.println("-----------------------------------------------");
+			System.out.println("");
+			System.out.println("");
+			System.out.println(name + "さんの現在地点は：" + location + "マス目です。");
+			System.out.println("");
+			System.out.println("サイコロを振りますか？");
+			System.out.println(">>はい　( Press : y Key)");
+			System.out.println(">>いいえ　( Press : n Key)");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("-----------------------------------------------");
+			ans = sc.nextLine();
+		}
+		return location;
+	}
+
+}
+
+
+
+
