@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-28T07:06:18.506Z" agent="5.0 (Windows)" etag="bvJtHfjLkNNHy25Fo3WB" version="20.8.23" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-28T07:13:36.332Z" agent="5.0 (Windows)" etag="8NIdc0sDCg2RUq8bdogv" version="20.8.23" type="github">
   <diagram name="ページ1" id="0ta6XOfS64GwJ7nWs06E">
     <mxGraphModel dx="1511" dy="1227" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -25,94 +25,59 @@
         <mxCell id="UnUI35RLRHn_LbMU51n1-17" value="-dice() :int&#xa;- getLineCd(value:int) : void&#xa;- getBorder() : void&#xa;+ ready() : void&#xa;+ getName() : String&#xa;+select() : int&#xa;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="UnUI35RLRHn_LbMU51n1-14">
           <mxGeometry y="118" width="210" height="122" as="geometry" />
         </mxCell>
+        <mxCell id="UnUI35RLRHn_LbMU51n1-70" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UnUI35RLRHn_LbMU51n1-21" target="UnUI35RLRHn_LbMU51n1-23">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="398" y="110" />
+              <mxPoint x="398" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="UnUI35RLRHn_LbMU51n1-21" value="&lt;div&gt;Main&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="130" y="130" width="90" height="40" as="geometry" />
+          <mxGeometry x="355" y="30" width="85" height="40" as="geometry" />
         </mxCell>
         <mxCell id="UnUI35RLRHn_LbMU51n1-23" value="Sugoroku" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="340" y="120" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="UnUI35RLRHn_LbMU51n1-27" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="UnUI35RLRHn_LbMU51n1-21">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="120" y="149.5" as="sourcePoint" />
-            <mxPoint x="340" y="149.5" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="UnUI35RLRHn_LbMU51n1-28" value="実行" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="240" y="150" width="60" height="30" as="geometry" />
+          <mxGeometry x="450" y="80" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="UnUI35RLRHn_LbMU51n1-32" value="開始確認" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="340" y="250" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="UnUI35RLRHn_LbMU51n1-34" value="サイコロ振るか確認" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="340" y="368" width="120" height="42" as="geometry" />
-        </mxCell>
-        <mxCell id="UnUI35RLRHn_LbMU51n1-35" value="yes" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="310" y="480" width="70" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="UnUI35RLRHn_LbMU51n1-36" value="no" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="410" y="480" width="70" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="UnUI35RLRHn_LbMU51n1-37" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.545;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="UnUI35RLRHn_LbMU51n1-34" target="UnUI35RLRHn_LbMU51n1-35">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="400" y="708" as="sourcePoint" />
-            <mxPoint x="370" y="418" as="targetPoint" />
+        <mxCell id="UnUI35RLRHn_LbMU51n1-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="UnUI35RLRHn_LbMU51n1-72" target="UnUI35RLRHn_LbMU51n1-48">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="710" as="targetPoint" />
+            <mxPoint x="460" y="389" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="630" y="420" />
+              <mxPoint x="630" y="689" />
+            </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="UnUI35RLRHn_LbMU51n1-38" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.394;entryY=-0.2;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="UnUI35RLRHn_LbMU51n1-34" target="UnUI35RLRHn_LbMU51n1-36">
+        <mxCell id="UnUI35RLRHn_LbMU51n1-37" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="UnUI35RLRHn_LbMU51n1-71">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="400" y="708" as="sourcePoint" />
-            <mxPoint x="450" y="658" as="targetPoint" />
+            <mxPoint x="400" y="410" as="sourcePoint" />
+            <mxPoint x="400" y="482" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="UnUI35RLRHn_LbMU51n1-39" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="UnUI35RLRHn_LbMU51n1-34" target="UnUI35RLRHn_LbMU51n1-32">
+        <mxCell id="UnUI35RLRHn_LbMU51n1-39" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="UnUI35RLRHn_LbMU51n1-72" target="UnUI35RLRHn_LbMU51n1-32">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="350" y="350" as="sourcePoint" />
+            <mxPoint x="400" y="368" as="sourcePoint" />
             <mxPoint x="400" y="310" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="UnUI35RLRHn_LbMU51n1-33" value="ユーザー名取得" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="335" y="310" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="UnUI35RLRHn_LbMU51n1-46" value="サイコロ振る" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="280" y="585" width="110" height="38" as="geometry" />
-        </mxCell>
-        <mxCell id="UnUI35RLRHn_LbMU51n1-47" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="340" y="520" as="sourcePoint" />
-            <mxPoint x="340" y="580" as="targetPoint" />
+        <mxCell id="UnUI35RLRHn_LbMU51n1-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.6;entryY=-0.05;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="580" as="sourcePoint" />
+            <mxPoint x="400" y="668" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="UnUI35RLRHn_LbMU51n1-48" value="ゲーム終了" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="540" y="482" width="110" height="38" as="geometry" />
-        </mxCell>
-        <mxCell id="UnUI35RLRHn_LbMU51n1-49" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="480" y="492" as="sourcePoint" />
-            <mxPoint x="540" y="492" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="UnUI35RLRHn_LbMU51n1-50" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" target="UnUI35RLRHn_LbMU51n1-35">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="280" y="600" as="sourcePoint" />
-            <mxPoint x="320" y="530" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="230" y="600" />
-              <mxPoint x="230" y="510" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="UnUI35RLRHn_LbMU51n1-52" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;" edge="1" parent="1" source="UnUI35RLRHn_LbMU51n1-46" target="UnUI35RLRHn_LbMU51n1-48">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="390" y="742" as="sourcePoint" />
-            <mxPoint x="440" y="692" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="335" y="660" />
-              <mxPoint x="595" y="660" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="UnUI35RLRHn_LbMU51n1-53" value="ユーザーのコマ数が10に到達" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="440" y="640" width="200" height="40" as="geometry" />
+          <mxGeometry x="345" y="670" width="110" height="38" as="geometry" />
         </mxCell>
         <mxCell id="UnUI35RLRHn_LbMU51n1-55" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.45;entryY=-0.1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="UnUI35RLRHn_LbMU51n1-23" target="UnUI35RLRHn_LbMU51n1-32">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -120,8 +85,32 @@
             <mxPoint x="395" y="240" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="UnUI35RLRHn_LbMU51n1-57" value="ユーザーのコマ数が10未満" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="60" y="530" width="200" height="40" as="geometry" />
+        <mxCell id="UnUI35RLRHn_LbMU51n1-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="UnUI35RLRHn_LbMU51n1-71" target="UnUI35RLRHn_LbMU51n1-72">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="410" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="130" y="560" />
+              <mxPoint x="130" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UnUI35RLRHn_LbMU51n1-71" value="ユーザーのコマが10以上" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="230" y="520" width="340" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="UnUI35RLRHn_LbMU51n1-72" value="サイコロを振る" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="227.5" y="380" width="340" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="UnUI35RLRHn_LbMU51n1-77" value="yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="470" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UnUI35RLRHn_LbMU51n1-78" value="yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="620" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UnUI35RLRHn_LbMU51n1-79" value="no" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="480" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UnUI35RLRHn_LbMU51n1-80" value="no" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="640" y="510" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
